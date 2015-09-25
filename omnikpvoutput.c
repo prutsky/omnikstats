@@ -56,13 +56,12 @@ int omnikpvoutput(void) {
 	char pvstring[200];
 	char date[10], now[10];
 
-	sprintf(pvstring, "%s?d=%s&t=%s&v1=%.0f&v2=%.0f&v5=%.1f&v6=%.1f&key=%s&sid=%s", 
+	sprintf(pvstring, "%s?d=%s&t=%s&v1=%.0f&v2=%.0f&v6=%.1f&key=%s&sid=%s", 
 		stats.url,
 		getdatetime(date, 0),
 		getdatetime(now, 1),
 		stats.PowerToday,
 		stats.PVPower[0],
-		stats.temperature,
 		stats.PVVoltageDC[0],
 		stats.key, stats.ID);
 

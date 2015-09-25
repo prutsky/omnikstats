@@ -7,6 +7,7 @@
 ** 
 **	Author: Beach
 **	V1.0 may,25 2013
+** 	V1.1 sept, 25 2015
 */
 
 #include <stdio.h>
@@ -59,9 +60,9 @@ void omnikfillstruct(char *server_reply) {
 			stats.PVPower[i] = ctonr(&server_reply[59+2*i], 2, 1);
 			if (stats.verbose) {
 				printf("PV%d Voltage (DC):\t\t%.1f\n", i+1, stats.PVVoltageDC[i]);
-				printf("IV%d Voltage (DC):\t\t%.1f\n", i+1, stats.IVCurrentDC[i]);
+				printf("IV%d Current (DC):\t\t%.1f\n", i+1, stats.IVCurrentDC[i]);
 				printf("PV%d Voltage (AC):\t\t%.1f\n", i+1, stats.PVVoltageAC[i]);
-				printf("IV%d Voltage (AC):\t\t%.1f\n", i+1, stats.IVCurrentAC[i]);
+				printf("IV%d Current (AC):\t\t%.1f\n", i+1, stats.IVCurrentAC[i]);
 				printf("PV%d Power:\t\t\t%.0f\n", i+1, stats.PVPower[i]);
 			}
 		}
